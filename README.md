@@ -1,1 +1,1 @@
-InfinityCalci
+InfinityCalc
