@@ -3,6 +3,10 @@ let memory = 0;
 let buttons = document.querySelectorAll('.btn');
 Array.from(buttons).forEach((button)=>{
     button.addEventListener('click',(e)=>{
+        // sound effect
+        let sound = document.getElementById('clickSound');
+        sound.currentTime = 0;
+        sound.play();
         let value = e.target.innerHTML;
 
         // Equal button
@@ -89,4 +93,11 @@ Array.from(buttons).forEach((button)=>{
 
         document.querySelector('.display').value = string;
     }
+});
+
+// Theme Dark/Light
+
+let themeBtn = document.querySelector('.theme-toggle');
+themeBtn.addEventListener('click', () =>{
+    document.body.classList.toggle('dark');
 });
