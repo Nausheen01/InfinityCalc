@@ -103,3 +103,16 @@ let themeBtn = document.querySelector('.theme-toggle');
 themeBtn.addEventListener('click', () =>{
     document.body.classList.toggle('dark');
 });
+
+// Voice Input
+let voiceBtn = document.querySelector('.voice-btn');
+voiceBtn.addEventListener('click', ()=>{
+    let recognition = new webkitSpeechRecognition();
+    recognition.start();
+    recognition.onresult = function(event){
+        let speechText = event.results[0][0].transcript;
+        document.querySelector('.display').value= speechText;
+        string= speechText;
+    }
+})
+
