@@ -20,6 +20,8 @@ Array.from(buttons).forEach((button)=>{
                 document.querySelector('.display').value = 'Error';
                 string = "";
             }
+            let history = document.querySelector('.history');
+            history.innerHTML += `<p> ${string}</p>`
             
         }
         // Clear button
